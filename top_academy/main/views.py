@@ -9,7 +9,7 @@ def index(request):
 
 def about(request):
     context = {
-        'title': 'Главная страница',
+        'title': 'О магазине',
         'content': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit',
     }
-    return render(request, 'main/index.html', context)
+    return render(request, 'main/about.html', context)
