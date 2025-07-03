@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    <title>{{ title }}</title>
+{% endblock title %}
+
+{% block content %}
+
+    {% for item in goods %}
+    <div>
+        <div>{{ item.name }}</div>
+        <div>{{ item.description }}</div>
+        <div><a href="{% url 'goods:product' slug=item.slug %}">slug</a></div>
+        <div></div>
+        <div></div>
+    </div>
+    {% endfor %}
+
+{% endblock content %}
